@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/FITRS.png","C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/bin/DesktopGL/Content/FITRS.xnb","TextureProcessor","Texture2DContent",313766,1522841,0.0969
+"C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/MRS.png","C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/bin/DesktopGL/Content/MRS.xnb","TextureProcessor","Texture2DContent",216431,1406681,0.0368187
+"C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/road.png","C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/bin/DesktopGL/Content/road.xnb","TextureProcessor","Texture2DContent",96,213,0.0658271

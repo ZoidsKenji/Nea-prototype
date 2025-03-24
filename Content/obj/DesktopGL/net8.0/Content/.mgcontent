@@ -4,9 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/FITRS.png</File>
-    <File>C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/MRS.png</File>
-    <File>C:/Users/User/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/road.png</File>
+    <File>c:/Users/user/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/FITRS.png</File>
+    <File>c:/Users/user/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/MRS.png</File>
+    <File>c:/Users/user/OneDrive - King Edward VI College, Stourbridge/NeaPrototype/NeaPrototype/Content/road.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

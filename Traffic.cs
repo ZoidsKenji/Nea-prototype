@@ -27,26 +27,33 @@ namespace NeaPrototype{
 
         public Traffic(Texture2D texture, Vector2 pos) : base(texture, pos){
             this.midpoint = 1280 / 2;
+            this.xPos = (lane - 1) * 500;
         }
 
         private void laneXpos(){
             if (lane == 0){
-                float curveFactor = (midpoint - (1280 / 2)) / (1280 / 2.0f);
+                float curveFactor = (this.midpoint - (1280 / 2)) / (1280 / 2.0f);
                 float curveStrength = 600;
                 float yFactor = Math.Max(0, (pos.Y - 480) / 480.0f);
 
-                xPos = (int)Math.Floor(midpoint - ((scale * 300) / 2.0) - curveFactor * Math.Pow(1 - yFactor, 3) * curveStrength);
-                speed = 60;
+                xPos = (int)Math.Floor(this.midpoint - ((scale * 300) / 2.0) - (curveFactor * Math.Pow(1 - yFactor, 3) * curveStrength));
+
+                speed = 50;
             }else if (lane == 1){
-                xpos = (int)((640 * 1) - (pos.Y * 0.25));
-                speed = 70;
-            }else if (lane == 2){
-                float curveFactor = (midpoint - (1280 / 2)) / (1280 / 2.0f);
-                float curveStrength = 600;
+                float curveFactor = (this.midpoint - (1280 / 2.0f)) / (1280 / 2.0f);
+                float curveStrength = 0;
                 float yFactor = Math.Max(0, (pos.Y - 480) / 480.0f);
 
-                xPos = (int)Math.Floor(midpoint + ((scale * 300) / 2.0) - curveFactor * Math.Pow(1 - yFactor, 3) * curveStrength);
-                speed = 80;
+                xPos = (int)Math.Floor(this.midpoint - ((scale * 300) / 2.0) - curveFactor * Math.Pow(1 - yFactor, 3) * curveStrength);
+
+                speed = 60;
+            }else if (lane == 2){
+                float curveFactor = (this.midpoint - (1280 / 2)) / (1280 / 2.0f);
+                float curveStrength = -600;
+                float yFactor = Math.Max(0, (pos.Y - 480) / 480.0f);
+
+                xPos = (int)Math.Floor(this.midpoint - ((scale * 300) / 2.0) - curveFactor * Math.Pow(1 - yFactor, 3) * curveStrength);
+                speed = 70;
 
             }
         }
@@ -55,7 +62,7 @@ namespace NeaPrototype{
             this.midpoint = (int)midPointX + 640;
             this.pos.Y += (playerSpeed - speed) * time;
             //scale = (int)Math.Floor(((pos.Y) * 0.01));
-            scale = Math.Max((pos.Y - 480) / 120f, 0.1f);
+            scale = Math.Max((pos.Y - 480) / 120f, 0f);
             laneXpos();
         }
 

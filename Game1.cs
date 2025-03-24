@@ -7,11 +7,16 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace NeaPrototype;
 
+// other than the c# code (.cs) and the image (of sprite), the rest are built in (or part of the monogame framework porject template)
+// so for now The code that I've done is Game1.cs, Player.cs, Road.cs, Sprite.cs and Traffic.cs
+
+
 public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-    private float Xspeed = 300;
+    private float Xaccel = 300;
+    private float Xspeed = 0;
 
     List<Sprite> sprites;
     List<Sprite> roads;
@@ -69,6 +74,7 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
+        Xaccel = player.speed / 10;
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape)){
             Exit();
         }
@@ -84,10 +90,12 @@ public class Game1 : Game
             if (sprite is Player playersprite){
 
                 if (Keyboard.GetState().IsKeyDown(Keys.D) && playersprite.xPos < 500){
-                    playersprite.moveX(Xspeed * (float)gameTime.ElapsedGameTime.TotalSeconds);
+                    Xspeed += Xaccel * (float)gameTime.ElapsedGameTime.TotalSeconds;
                 }else if (Keyboard.GetState().IsKeyDown(Keys.A) && playersprite.xPos > -500){
-                    playersprite.moveX(- Xspeed * (float)gameTime.ElapsedGameTime.TotalSeconds);
+                    Xspeed -=  Xaccel * (float)gameTime.ElapsedGameTime.TotalSeconds;
                 }
+
+                playersprite.moveX(Xspeed);
 
                 playerSpeed = playersprite.speed;
 

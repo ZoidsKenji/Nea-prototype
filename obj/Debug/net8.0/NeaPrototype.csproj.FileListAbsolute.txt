@@ -51,3 +51,4 @@ C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPro
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\ref\NeaPrototype.dll
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\Content\MRS.xnb
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\Content\FITRS.xnb
+C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.sourcelink.json

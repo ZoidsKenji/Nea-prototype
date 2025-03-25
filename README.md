@@ -11,6 +11,8 @@ The game is a motorway racing game where there is an infinitely long motorway wi
 > [!NOTE]  
 > These are just the idea of the game, so a lot of the stuff I've mentioned has not been made. So that will be what my final NEA project will look like.
 
+
+
 ## Candidate details
 
 **Centre number : 20570**
@@ -18,6 +20,8 @@ The game is a motorway racing game where there is an infinitely long motorway wi
 **Candidate number : 4035**
 
 **Candidate name : Chun Kin (Kenji) Mak**
+
+
 
 
 ## Screenshots

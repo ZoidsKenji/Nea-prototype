@@ -10,6 +10,11 @@ namespace NeaPrototype;
 // other than the c# code (.cs) and the image (of sprite), the rest are built in (or part of the monogame framework porject template)
 // so for now The code that I've done is Game1.cs, Player.cs, Road.cs, Sprite.cs and Traffic.cs
 
+// -- git update command--
+// git add .
+// git commit -m "your message"
+// git push origin main
+
 
 public class Game1 : Game
 {

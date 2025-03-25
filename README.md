@@ -29,6 +29,3 @@ The game is a motorway racing game where there is an infinitely long motorway wi
 <img src="https://github.com/user-attachments/assets/a1984e84-520a-4c0a-b916-465fd2f5d920" width="480">
 <img src="https://github.com/user-attachments/assets/6b9b970d-6175-4786-b2dd-3c2f16dddedb" width="480">
 <img src="https://github.com/user-attachments/assets/42962336-78e6-47bc-a632-af864a7cf839" width="480">
-
-![Screenshot 2025-03-23 222543](https://github.com/user-attachments/assets/6b9b970d-6175-4786-b2dd-3c2f16dddedb)
-![Screenshot 2025-03-23 222559](https://github.com/user-attachments/assets/42962336-78e6-47bc-a632-af864a7cf839)

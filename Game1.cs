@@ -42,7 +42,7 @@ public class Game1 : Game
     protected override void Initialize()
     {   
         IsFixedTimeStep = true;
-        TargetElapsedTime = TimeSpan.FromSeconds(1.0 / 60.0);
+        //TargetElapsedTime = TimeSpan.FromSeconds(1.0 / 60.0);
 
         _graphics.SynchronizeWithVerticalRetrace = true;
         _graphics.PreferredBackBufferHeight = 960;
@@ -93,11 +93,21 @@ public class Game1 : Game
         sprites.RemoveAll(sprite => sprite.Rect.Y > 1000 || sprite.Rect.Y < 370);
         foreach(Sprite sprite in sprites){
             if (sprite is Player playersprite){
+                
+                float fraction = 10f;
 
                 if (Keyboard.GetState().IsKeyDown(Keys.D) && playersprite.xPos < 500){
                     Xspeed += Xaccel * (float)gameTime.ElapsedGameTime.TotalSeconds;
                 }else if (Keyboard.GetState().IsKeyDown(Keys.A) && playersprite.xPos > -500){
                     Xspeed -=  Xaccel * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                }else if (Xspeed > 0){
+                    Xspeed -= (float)gameTime.ElapsedGameTime.TotalSeconds * fraction;
+                }else if (Xspeed < 0){
+                    Xspeed += (float)gameTime.ElapsedGameTime.TotalSeconds * fraction;
+                }
+
+                if (playersprite.xPos > 550 || player.xPos < -550){
+                    Xspeed = -Math.Abs(Xspeed) * (playersprite.xPos / Math.Abs(playersprite.xPos));
                 }
 
                 playersprite.moveX(Xspeed);
@@ -116,7 +126,7 @@ public class Game1 : Game
             }
 
             if (sprite.Rect.Intersects(player.Rect) && sprite != player){
-                if (Math.Abs(sprite.Rect.Y - player.Rect.Y) < 75 && Math.Abs(sprite.Rect.X - player.Rect.X) < 280){
+                if (Math.Abs(sprite.yPos - player.Rect.Y) < 50 && Math.Abs(sprite.Rect.X - player.Rect.X) < 20){
                     player.accelerate(((player.Rect.Y - sprite.Rect.Y) / 2) * (float)gameTime.ElapsedGameTime.TotalSeconds);
                     Console.WriteLine("Crash");
                 }

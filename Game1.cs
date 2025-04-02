@@ -33,6 +33,9 @@ public class Game1 : Game
 
     List<Sprite> sprites;
     List<Sprite> roads;
+    List<Sprite> roadLineL;
+    List<Sprite> roadLineR;
+
 
 
     public float playerSpeed;
@@ -71,6 +74,9 @@ public class Game1 : Game
         startPos.Y = 600;
         sprites = new List<Sprite>();
         roads = new List<Sprite>();
+        roadLineL = new List<Sprite>();
+        roadLineR = new List<Sprite>();
+
 
         player = new Player(texture, startPos);
         
@@ -79,7 +85,11 @@ public class Game1 : Game
         }
 
         for (int i = 0; i < 200; i++){
-            roads.Add(new RoadLine(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3))));
+            roadLineR.Add(new RoadLine(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3)), 0));
+        }
+
+        for (int i = 0; i < 200; i++){
+            roadLineL.Add(new RoadLine(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3)), 1));
         }
 
         // for (int i = 0; i < 320; i++){
@@ -154,6 +164,14 @@ public class Game1 : Game
         foreach (Sprite road in roads){
             road.moveMidPoint(-player.xPos);
         }
+
+        foreach (Sprite line in roadLineL){
+            line.moveMidPoint(-player.xPos);
+        }
+
+        foreach (Sprite line in roadLineR){
+            line.moveMidPoint(-player.xPos);
+        }
         
         base.Update(gameTime);
     }
@@ -170,6 +188,12 @@ public class Game1 : Game
         // _spriteBatch.Draw(mrs, new Rectangle(400, 400, 282, 190), Color.White);
         foreach(Sprite road in roads){
             _spriteBatch.Draw(road.texture, road.Rect, road.colour);
+        }
+        foreach(Sprite line in roadLineL){
+            _spriteBatch.Draw(line.texture, line.Rect, line.colour);
+        }
+        foreach(Sprite line in roadLineR){
+            _spriteBatch.Draw(line.texture, line.Rect, line.colour);
         }
         foreach(Sprite sprite in sprites){
             _spriteBatch.Draw(sprite.texture, sprite.Rect, sprite.colour);

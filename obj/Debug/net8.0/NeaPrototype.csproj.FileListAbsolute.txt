@@ -23,7 +23,10 @@ C:\Users\User\Pandora's Locked Room\NeaPrototype\NeaPrototype\obj\Debug\net8.0\r
 C:\Users\User\Pandora's Locked Room\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.pdb
 C:\Users\User\Pandora's Locked Room\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.genruntimeconfig.cache
 C:\Users\User\Pandora's Locked Room\NeaPrototype\NeaPrototype\obj\Debug\net8.0\ref\NeaPrototype.dll
+C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\Content\FITRS.xnb
+C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\Content\MRS.xnb
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\Content\road.xnb
+C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\Content\whiteLine.xnb
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\NeaPrototype.exe
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\NeaPrototype.deps.json
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\NeaPrototype.runtimeconfig.json
@@ -43,12 +46,10 @@ C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPro
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.AssemblyInfoInputs.cache
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.AssemblyInfo.cs
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.sourcelink.json
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaProto.02B95D2F.Up2Date
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.dll
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\refint\NeaPrototype.dll
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.pdb
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.genruntimeconfig.cache
 C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\ref\NeaPrototype.dll
-C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\Content\MRS.xnb
-C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\bin\Debug\net8.0\Content\FITRS.xnb
-C:\Users\User\OneDrive - King Edward VI College, Stourbridge\NeaPrototype\NeaPrototype\obj\Debug\net8.0\NeaPrototype.sourcelink.json

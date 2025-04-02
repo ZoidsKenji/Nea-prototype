@@ -26,6 +26,7 @@ public class Game1 : Game
     List<Sprite> sprites;
     List<Sprite> roads;
 
+
     public float playerSpeed;
     Player player;
 
@@ -67,6 +68,10 @@ public class Game1 : Game
         
         for (int i = 0; i < 200; i++){
             roads.Add(new Road(Content.Load<Texture2D>("road"), new Vector2(0, 390 + (i * 3))));
+        }
+
+        for (int i = 0; i < 200; i++){
+            roads.Add(new Road(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3))));
         }
 
         // for (int i = 0; i < 320; i++){

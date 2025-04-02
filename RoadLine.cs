@@ -31,13 +31,14 @@ namespace NeaPrototype{
                 this.midpoint = (int)xMove + 870;
             }
             
-            scale = Math.Max(0, (int)Math.Floor((pos.Y - 480) * 0.05));
+            scale = Math.Max(0, (int)Math.Floor((pos.Y - 470) * 0.05));
 
             float curveFactor = (midpoint - (1280 / 2)) / (1280 / 2.0f);
             float curveStrength = 600;
-            float yFactor = Math.Max(0, (pos.Y - 480) / 480.0f);
+            float yFactor = Math.Max(0, (pos.Y - 470) / 470.0f);
 
             xPos = (int)Math.Floor(midpoint - (scale / 2.0) - curveFactor * Math.Pow(1 - yFactor, 3) * curveStrength);
+            
 
         }
 

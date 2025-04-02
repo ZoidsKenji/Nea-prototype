@@ -87,7 +87,7 @@ public class Game1 : Game
         for (int i = 0; i < 200; i++){
             roadLineR.Add(new RoadLine(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3)), 0));
         }
-
+        
         for (int i = 0; i < 200; i++){
             roadLineL.Add(new RoadLine(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3)), 1));
         }

@@ -11,9 +11,17 @@ namespace NeaPrototype;
 // so for now The code that I've done is Game1.cs, Player.cs, Road.cs, Sprite.cs and Traffic.cs
 
 // -- git update command--
+//
+// normal commit command:
 // git add .
 // git commit -m "your message"
 // git push origin main
+//
+// if fail:
+// git pull origin main --rebase
+// git push origin main
+// or:
+// git push --force origin main (Use with Caution)
 
 
 public class Game1 : Game
@@ -71,7 +79,7 @@ public class Game1 : Game
         }
 
         for (int i = 0; i < 200; i++){
-            roads.Add(new Road(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3))));
+            roads.Add(new RoadLine(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3))));
         }
 
         // for (int i = 0; i < 320; i++){

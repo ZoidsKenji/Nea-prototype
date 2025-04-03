@@ -43,6 +43,7 @@ public class Game1 : Game
 
 
     public float spawnCounter = 3;
+    public float counter = 1;
 
     public Game1()
     {
@@ -54,7 +55,7 @@ public class Game1 : Game
     protected override void Initialize()
     {   
         IsFixedTimeStep = true;
-        //TargetElapsedTime = TimeSpan.FromSeconds(1.0 / 60.0);
+        TargetElapsedTime = TimeSpan.FromSeconds(1.0 / 120.0);
 
         _graphics.SynchronizeWithVerticalRetrace = true;
         _graphics.PreferredBackBufferHeight = 960;
@@ -80,16 +81,24 @@ public class Game1 : Game
 
         player = new Player(texture, startPos);
         
-        for (int i = 0; i < 200; i++){
-            roads.Add(new Road(Content.Load<Texture2D>("road"), new Vector2(0, 390 + (i * 3))));
+        for (int i = 0; i < 170; i++){
+            roads.Add(new Road(Content.Load<Texture2D>("road"), new Vector2(0, 480 + (i * 3))));
         }
 
         // for (int i = 0; i < 200; i++){
         //     roadLineR.Add(new RoadLine(Content.Load<Texture2D>("whiteLine"), new Vector2(0, 390 + (i * 3)), 0));
         // }
         
-        for (int i = 0; i < 200; i++){
-            roadLine.Add(new RoadLine(Content.Load<Texture2D>("road"), new Vector2(0, 390 + (i * 3)), 1));
+        for (int i = 0; i < 30; i++){
+            roadLine.Add(new RoadLine(Content.Load<Texture2D>("road"), new Vector2(0, 480 + (i * 3)), 1));
+        }
+
+        for (int i = 0; i < 30; i++){
+            roadLine.Add(new RoadLine(Content.Load<Texture2D>("road"), new Vector2(0, 590 + (i * 3)), 1));
+        }
+
+        for (int i = 0; i < 30; i++){
+            roadLine.Add(new RoadLine(Content.Load<Texture2D>("road"), new Vector2(0, 790 + (i * 3)), 1));
         }
 
         // for (int i = 0; i < 320; i++){
@@ -108,12 +117,22 @@ public class Game1 : Game
         }
         
         spawnCounter += (float)gameTime.ElapsedGameTime.TotalSeconds * (1 + (playerSpeed / 500f));
+        counter += (float)gameTime.ElapsedGameTime.TotalSeconds * (1 + (playerSpeed / 2f));
         if (spawnCounter > 3- (playerSpeed / 500f)){
             sprites.Add(new Traffic(Content.Load<Texture2D>("FITRS"), new Vector2(640, 390)));
             spawnCounter = 0;
+            
+        }
+
+        if (spawnCounter > 0.1 - (playerSpeed / 500f)){
+            roadLine.Add(new RoadLine(Content.Load<Texture2D>("road"), new Vector2(0, 470), 1));
+            counter = -1;
+            
         }
 
         sprites.RemoveAll(sprite => sprite.Rect.Y > 1000 || sprite.Rect.Y < 370);
+        roadLine.RemoveAll(line => line.Rect.Y > 1000 || line.Rect.Y < 370);
+
         foreach(Sprite sprite in sprites){
             if (sprite is Player playersprite){
                 
@@ -167,6 +186,7 @@ public class Game1 : Game
 
         foreach (Sprite line in roadLine){
             line.moveMidPoint(-player.xPos);
+            line.updateObject((float)gameTime.ElapsedGameTime.TotalSeconds, playerSpeed, player.xPos);
         }
 
         // foreach (Sprite line in roadLineR){

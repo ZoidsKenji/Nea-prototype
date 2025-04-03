@@ -22,7 +22,7 @@ namespace NeaPrototype{
 
         public void accelerate(float accel){
             speed += accel;
-            Console.WriteLine(xPos);
+            Console.WriteLine(speed);
         }
 
     }

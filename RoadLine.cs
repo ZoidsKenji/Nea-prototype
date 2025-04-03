@@ -13,7 +13,7 @@ namespace NeaPrototype{
         public int LeftOrRight = 0;
         public override Rectangle Rect{
             get{
-                return new Rectangle((int)xPos, (int)pos.Y, scale, scale);
+                return new Rectangle((int)xPos, (int)pos.Y, scale, 3);
             }
         }
 
@@ -25,13 +25,14 @@ namespace NeaPrototype{
         }
 
         public override void moveMidPoint(float xMove){
-            if (LeftOrRight == 1){
-                this.midpoint = (int)xMove + 400;
-            }else{
-                this.midpoint = (int)xMove + 870;
-            }
+            // if (LeftOrRight == 1){
+            //     this.midpoint = (int)xMove + 400;
+            // }else{
+            //     this.midpoint = (int)xMove + 870;
+            // }
+            this.midpoint = (int)xMove + 640;
             
-            scale = Math.Max(0, (int)Math.Floor((pos.Y - 470) * 0.05));
+            scale = Math.Max(0, (int)Math.Floor((pos.Y - 480) * 1.75));
 
             float curveFactor = (midpoint - (1280 / 2)) / (1280 / 2.0f);
             float curveStrength = 600;

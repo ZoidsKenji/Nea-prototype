@@ -12,7 +12,7 @@ namespace NeaPrototype{
         public int midpoint = 1280 / 2;
         public override Rectangle Rect{
             get{
-                return new Rectangle((int)xPos, (int)pos.Y, width, 10);
+                return new Rectangle((int)xPos, (int)pos.Y, width, 3);
             }
         }
 

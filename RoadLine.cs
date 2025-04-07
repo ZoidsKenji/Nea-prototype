@@ -13,7 +13,7 @@ namespace NeaPrototype{
         public int LeftOrRight = 0;
         public override Rectangle Rect{
             get{
-                return new Rectangle((int)xPos, (int)pos.Y, scale, 5);
+                return new Rectangle((int)xPos, (int)pos.Y, scale, Math.Max(scale / 40, 3));
             }
         }
 
@@ -44,7 +44,8 @@ namespace NeaPrototype{
         }
 
         public override void updateObject(float time, float playerSpeed, float midPoint){
-            this.pos.Y += time * playerSpeed * 10; //* (this.pos.Y - 480);
+            float speedFactor = 6;
+            this.pos.Y += time * playerSpeed * (this.pos.Y / 480) * speedFactor;
         }
 
     }

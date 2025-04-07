@@ -124,14 +124,14 @@ public class Game1 : Game
             
         }
 
-        if (spawnCounter > 0.1 - (playerSpeed / 500f)){
-            roadLine.Add(new RoadLine(Content.Load<Texture2D>("road"), new Vector2(0, 470), 1));
-            counter = -1;
-            
+        if (spawnCounter > 2 - (playerSpeed / 400f)){
+            for (int i = 0; i < 15; i++){
+                roadLine.Add(new RoadLine(Content.Load<Texture2D>("road"), new Vector2(0, 350), 1));
+            }  
         }
 
         sprites.RemoveAll(sprite => sprite.Rect.Y > 1000 || sprite.Rect.Y < 370);
-        roadLine.RemoveAll(line => line.Rect.Y > 1000 || line.Rect.Y < 370);
+        roadLine.RemoveAll(line => line.Rect.Y > 1000 || line.Rect.Y < 300);
 
         foreach(Sprite sprite in sprites){
             if (sprite is Player playersprite){

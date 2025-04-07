@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NeaPrototype")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a68a42b2169c3b7f6fe365083366133c18b48fb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccd8874ab10fcfdb98ce07741607a592b88ec59b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NeaPrototype")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NeaPrototype")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
